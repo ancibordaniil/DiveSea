@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 53px;
+
+    transition: gap 0.3s ease;
+
+    .headerNav {
+        display: flex;
+        flex-direction: row;
+
+        gap: 93.49px;
+    }
+
+    .navText {
+        color: rgba(96, 96, 96, 1);
+        font-size: 17.83px;
+        text-decoration: none;
+        font-family: 'Inter', serif;
+    }
+
+    .Container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .button {
+            color: white;
+            background-color: rgba(20, 20, 22, 1);
+
+            padding: 18.17px 24.26px 16.17px 24.26px;
+            border-radius: 16.17px;
+            font-family: 'Inter', serif;
+            font-size: 16.17px;
+            white-space: nowrap; /* Запрещает перенос строк */
+
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; /* Плавный переход */
+        }
+
+        .button:hover {
+            background-color: rgba(50, 50, 55, 1); /* Светлее при наведении */
+        }
+
+        .searchInputWrapper {
+            display: flex;
+            align-items: center; /* Центрирование по вертикали */
+
+            .searchInput {
+                padding: 0px 0px 0px 70px; /* Отступы для изображения */
+                transition: all 0.3s ease-in-out; /* Плавный переход */
+
+                width: 280.45px;
+                height: 57px;
+                border-radius: 14.88px;
+
+                border: rgba(237, 237, 237, 1);
+                background: rgba(237, 237, 237, 1);
+            }
+
+            .searchInput::placeholder {
+                font-family: 'Poppins', serif;
+                font-size: 16.71px;
+
+                transition: opacity 0.3s ease-in-out; /* Плавное исчезновение */
+            }
+
+            .searchInput:focus {
+                border-color: #007bff; /* Меняем цвет границы */
+                background-color: #ffffff; /* Белый фон */
+                box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5); /* Синее свечение */
+                outline: none; /* Убираем стандартную рамку браузера */
+            }
+
+            .icon1 {
+                position: absolute;
+                left: 20px; /* Размещение первой иконки */
+                top: 26px;
+                transform: translateY(-50%);
+            }
+
+            .icon2 {
+                position: absolute;
+                left: 35px; /* Размещение второй иконки */
+                top: 37px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    @media (min-width: 1600px) {
+        gap: 780px;
+    }
+
+    @media (max-width: 1600px) {
+        gap: 400px;
+    }
+
+    @media (max-width: 1024px) {
+        gap: 100px;
+    }
+
+    @media (max-width: 768px) {
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        gap: 10px; /* Еще меньше gap для экранов до 480px */
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "lib": ["dom", "esnext"],
+      "allowJs": true,
+      "jsx": "react-jsx", 
+      "moduleResolution": "node",
+      "strict": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src"]
+  }
+  
