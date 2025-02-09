@@ -1,30 +1,52 @@
 header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 53px;
-
-    transition: gap 0.3s ease;
+    padding: 53px 0px 53px 53px;
+    width: 95%;
 
     .headerNav {
         display: flex;
         flex-direction: row;
 
+        margin-left: auto;
         gap: 93.49px;
     }
 
     .navText {
+        position: relative;
+        text-decoration: none;
         color: rgba(96, 96, 96, 1);
         font-size: 17.83px;
-        text-decoration: none;
         font-family: 'Inter', serif;
+        transition: color 0.3s ease-in-out;
+
     }
+    
+    .navText::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: #007bff;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+    
+    .navText:hover::after {
+        width: 100%;
+        left: 0;
+    }
+    
 
     .Container {
         position: relative;
         display: flex;
         flex-direction: row;
         gap: 30px;
+        margin-left: auto;
 
         .button {
             color: white;
@@ -53,6 +75,8 @@ header {
                 padding: 0px 0px 0px 70px; /* Отступы для изображения */
                 transition: all 0.3s ease-in-out; /* Плавный переход */
 
+                font-size: 18px; /* Увеличивает размер текста */
+                
                 width: 280.45px;
                 height: 57px;
                 border-radius: 14.88px;
@@ -89,25 +113,5 @@ header {
                 transform: translateY(-50%);
             }
         }
-    }
-
-    @media (min-width: 1600px) {
-        gap: 780px;
-    }
-
-    @media (max-width: 1600px) {
-        gap: 400px;
-    }
-
-    @media (max-width: 1024px) {
-        gap: 100px;
-    }
-
-    @media (max-width: 768px) {
-        gap: 30px;
-    }
-
-    @media (max-width: 480px) {
-        gap: 10px; /* Еще меньше gap для экранов до 480px */
     }
 }

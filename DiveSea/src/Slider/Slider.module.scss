@@ -1,0 +1,119 @@
+.Weekly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 127px;
+
+    background-color: rgba(241, 241, 241, 1);
+
+    width: 100%;
+    height: 989px;
+
+    h1 {
+        color: rgba(197, 197, 197, 1);
+
+        font-family: Poppins;
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 26.92px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .slider {
+        position: relative;
+        height: 402px;
+        width: 800px;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Добавить для выравнивания по центру */
+        gap: 100px;
+        transition: transform 0.5s ease-in-out;
+
+        /* Используем CSS-переменные для расчета смещения */
+        transform: translateX(
+            var(--transform-value)
+        ); /* Использование переменной CSS */
+    }
+
+    .slide {
+        flex-shrink: 0; /* Запрещаем сжать слайды */
+        overflow: hidden; /* Прячем контент, который выходит за пределы */
+
+        width: 201.13px;
+        height: 100%;
+        background: white;
+        border-radius: 23.48px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+
+        
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Подгонка изображения под размер контейнера */
+        max-height: 60%; /* Ограничаем максимальную высоту изображения */
+        border-radius: 23.48px;
+    }
+
+    .textBlock {
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* Кнопки */
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
